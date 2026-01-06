@@ -1,0 +1,18 @@
+START
+Display payment page
+User enters payment details
+Validate payment details
+
+IF payment is valid THEN
+    Process payment
+    IF payment successful THEN
+        Confirm booking
+        Display payment success message
+    ELSE
+        Display payment failed message
+    END IF
+ELSE
+    Display invalid payment details message
+END IF
+
+END
