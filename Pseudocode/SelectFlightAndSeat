@@ -1,1 +1,15 @@
+START Function SelectSeat
+    INPUT selectedFlight_ID
+    CALL GetSeatMap(selectedFlight_ID)
+    DISPLAY SeatMap
 
+    INPUT userSeatSelection
+    IF SeatMap[userSeatSelection] == "Available" THEN
+        UPDATE SeatMap SET status = "Reserved"
+        ADD selection TO CurrentBooking
+        PROCEED to Payment
+    ELSE
+        DISPLAY "Seat taken, please choose another."
+        RETURN to SeatMap
+    END IF
+END Function
