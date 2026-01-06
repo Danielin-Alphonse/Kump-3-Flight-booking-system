@@ -1,3 +1,4 @@
+``` mermaid
 flowchart LR
     Start([Start]) --> Input1[/Input Username & Password/]
     Input1 --> Process1[Check Database Records]
@@ -14,3 +15,4 @@ flowchart LR
     Input3 --> Process2[Save New User to Database]
     Process2 --> Output3[/Display "Registration Complete"/]
     Output3 --> Input1
+```
